@@ -98,5 +98,17 @@ $(document).ready(function () {
         if (currentPlayer === 'O') {
             changePlayer();
         }
-    })
+        arrayGameBoard.forEach(function (tile)  {
+            tile.innerText = '';
+            tile.classList.remove('playerX');
+            tile.classList.remove('playerO');
+        }); 
+      }
+      arrayGameBoard.forEach( function (tile, index)  {
+        tile.addEventListener('click', () => userAction(tile, index));
+      });
+      
+      resetButton.addEventListener('click', resetBoardGame);
+      });
+      
 
