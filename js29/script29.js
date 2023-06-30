@@ -82,6 +82,14 @@ $(document).ready(function () {
         showAllPlayer.innerText = currentPlayer;
         showAllPlayer.classList.add(`player${currentPlayer}`);
       }
-      
+      const userAction = function (tile, index)  {
+        if(isValidAction(tile) && isGameActive) {
+            tile.innerText = currentPlayer;
+            tile.classList.add(`player${currentPlayer}`);
+            updateBoardGame(index);
+            handleResultValidation();
+            changePlayer();
+        }
+      }
     })
 
