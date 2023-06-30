@@ -76,6 +76,12 @@ $(document).ready(function () {
         board[index] = currentPlayer;
       }
 
+      const changePlayer =function ()  {
+        showAllPlayer.classList.remove(`player${currentPlayer}`);
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        showAllPlayer.innerText = currentPlayer;
+        showAllPlayer.classList.add(`player${currentPlayer}`);
+      }
       
     })
 
