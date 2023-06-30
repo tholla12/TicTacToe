@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     const arrayGameBoard = Array.from($('.col'));
     const showAllPlayer = document.querySelector('.show-Allplayer');
     const resetButton = document.querySelector('#replay');
@@ -37,9 +37,26 @@ $(document).ready(function(){
                 break;
             }
         }
-      
-      if (roundWon) {
+
+        if (roundWon) {
             announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON);
             isGameActive = false;
             return;
         }
+        if (!board.includes(''))
+            announce(TIE);
+
+    }
+    const announce =function (type) {
+        switch(type){
+            case PLAYERO_WON:
+                announcer.innerHTML = 'Player <span class="playerO">⭕</span> Won';
+                break;
+            case PLAYERX_WON:
+                announcer.innerHTML = 'Player <span class="playerX">❌</span> Won';
+                break;
+            case TIE:
+                announcer.innerText = 'Draw❌⭕';
+        }
+        announcer.classList.remove('hide');
+      };
