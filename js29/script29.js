@@ -60,3 +60,22 @@ $(document).ready(function () {
         }
         announcer.classList.remove('hide');
       };
+      const isValidAction =function (tile)  {
+        if (tile.innerText === 'X' )
+        {
+            return false;
+        }
+        if(tile.innerText === 'O'){
+            return false;
+        }
+      
+        return true;
+      };
+      // ||
+      const updateBoardGame = function (index)  {
+        board[index] = currentPlayer;
+      }
+
+      
+    })
+
