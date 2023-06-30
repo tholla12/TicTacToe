@@ -1,0 +1,35 @@
+body{
+  background: repeating-linear-gradient(45deg, peru 20%, seashell 40%);
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: cursive;
+}
+.container{
+  text-align: center;
+}
+.row{
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  margin-left: 410px;
+}
+#boxed{
+  margin-top: 50px;
+}
+.col{
+  border: 1px solid #000;
+  border-radius: 5px;
+  height: 95px;
+  width: 20px;
+  margin: 2px;
+  font-size: 50px;
+  font-weight: 500;
+}
+  .col:hover{
+  cursor: pointer;
+  background-color: peru;
+}
+#replay{
+  margin-top: 30px;
+background-color: peru;
+} 
