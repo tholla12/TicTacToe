@@ -91,5 +91,12 @@ $(document).ready(function () {
             changePlayer();
         }
       }
+      const resetBoardGame = function () {
+        board = ['', '', '', '', '', '', '', '', ''];
+        isGameActive = true;
+        announcer.innerText = '';
+        if (currentPlayer === 'O') {
+            changePlayer();
+        }
     })
 
